@@ -2,6 +2,12 @@
 
 var app = angular.module("fetchApp", function($q, $http) {
 
+  // All functions should get the following back
+    // request **URL**,
+    // request **HTTP method**
+    // **response time** and
+    // **content size** of the response
+
   let dataGET = (url) => {
     // http method GET
     return $q((resolve, reject) => {
