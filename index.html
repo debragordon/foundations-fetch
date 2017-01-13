@@ -25,7 +25,7 @@
         <div class="col-sm-6">
           <div class="form-group">
             <label for="exampleSelect1">HTTP Methods</label>
-            <select class="form-control" id="exampleSelect1">
+            <select class="form-control" id="exampleSelect1" ng-model="method">
               <option>GET</option>
               <option>POST</option>
               <option>OPTIONS</option>
@@ -37,7 +37,7 @@
 
       <div class="form-group row text-center">
         <div class="col-sm-12">
-          <button type="submit" class="btn btn-primary" ng-click="fetch()"><p>FETCH</p></button>
+          <button type="submit" class="btn btn-primary" ng-click="fetch()"><p>SUBMIT</p></button>
         </div>
       </div>
     </div>
@@ -46,7 +46,40 @@
   <div class="container top">
     <div class="row">
       <div class="col-sm-12 text-center">
-        ---> "results of the 'fetch' button display here" <---
+        <table class="table">
+          <thead class="thead-default">
+            <tr>
+              <th class="text-center">URL</th>
+              <th class="text-center">Method</th>
+              <th class="text-center">Time</th>
+              <th class="text-center">Size</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="text-center">url used (dynamic)</td>
+              <td class="text-center">method used (dynamic)</td>
+              <td class="text-center">time taken (dynamic)</td>
+              <td class="text-center">data size (dynamic)</td>
+            </tr>
+          </tbody>
+        </table>
+
+<!--         <table class="text-center">
+          <tr>
+            <th class="text-center">URL</th>
+            <th class="text-center">HTTP Method</th>
+            <th class="text-center">Response Time</th>
+            <th class="text-center">Content Size</th>
+          </tr>
+          <tr>
+            <td class="text-center">url here</td>
+            <td class="text-center">method here</td>
+            <td class="text-center">response time</td>
+            <td class="text-center">data size</td>
+          </tr>
+        </table> -->
+
       </div>
     </div>
   </div>
