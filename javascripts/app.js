@@ -1,3 +1,3 @@
-;(function () {
-  angular.module('fetchApp', []);
-})();
+"use strict";
+
+var app = angular.module("fetchApp", []);

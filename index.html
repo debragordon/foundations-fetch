@@ -17,7 +17,7 @@
       </div>
       <div class="form-group row">
         <div class="col-sm-6">
-          <label for="example-text-input" class="col-xs-6 col-form-label">Enter a URL</label>
+          <label for="example-text-input" class="col-xs-6 col-form-label" ng-model="url">Enter a URL</label>
           <div class="col-xs-12">
             <input class="form-control" type="text" placeholder="URL">
           </div>
@@ -26,10 +26,10 @@
           <div class="form-group">
             <label for="exampleSelect1">HTTP Methods</label>
             <select class="form-control" id="exampleSelect1" ng-model="method">
-              <option>GET</option>
-              <option>POST</option>
-              <option>OPTIONS</option>
-              <option>HEAD</option>
+              <option ng-model="getRequest">GET</option>
+              <option ng-model="postRequest">POST</option>
+              <option ng-model="optionsRequest">OPTIONS</option>
+              <option ng-model="headRequest">HEAD</option>
             </select>
           </div>
         </div>
@@ -57,29 +57,13 @@
           </thead>
           <tbody>
             <tr>
-              <td class="text-center">url used (dynamic)</td>
-              <td class="text-center">method used (dynamic)</td>
-              <td class="text-center">time taken (dynamic)</td>
-              <td class="text-center">data size (dynamic)</td>
+              <td class="text-center">{{response.url}}</td>
+              <td class="text-center">{{response.method}}</td>
+              <td class="text-center">{{response.time}}</td>
+              <td class="text-center">{{response.size}}</td>
             </tr>
           </tbody>
         </table>
-
-<!--         <table class="text-center">
-          <tr>
-            <th class="text-center">URL</th>
-            <th class="text-center">HTTP Method</th>
-            <th class="text-center">Response Time</th>
-            <th class="text-center">Content Size</th>
-          </tr>
-          <tr>
-            <td class="text-center">url here</td>
-            <td class="text-center">method here</td>
-            <td class="text-center">response time</td>
-            <td class="text-center">data size</td>
-          </tr>
-        </table> -->
-
       </div>
     </div>
   </div>
@@ -89,13 +73,8 @@
   <script type="text/javascript" src="lib/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
   <script src="lib/node_modules/angular/angular.min.js" type="text/javascript" charset="utf-8"></script>
   <script src="javascripts/app.js"></script>
-  <script src="javascripts/mainController.js"></script>
-  <script src="javascripts/requestService.js"></script>
+  <script src="javascripts/mainCtrl.js"></script>
   <script src="javascripts/responseFactory.js"></script>
-
-  <script type="text/javascript" src="/javascripts/app.js"></script>
-
-
 
 </body>
 </html>
